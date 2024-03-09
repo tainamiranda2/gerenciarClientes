@@ -19,10 +19,10 @@ export const Visualizar =()=>{
   
 <Link to="/">Voltar</Link>
 <h1>Todos os clientes cadastrados</h1>
-<Link to="/">Filtar</Link>
+<Link to="/filtrar">Filtar</Link>
             {clientes && clientes.length ===0?(
           <>
-        <p>Não foram encontrados nenhum jogador cadastrados</p>
+        <p>Não foram encontrados nenhum cliente cadastrado.</p>
         </>
         ):(
 <>

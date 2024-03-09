@@ -64,3 +64,13 @@ margin-bottom: 50px;
   text-align: center;
   margin-bottom: 30px;
   }
+
+  /*css do filtro*/
+
+  .filtro{
+    width:50%;
+    display: block;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
