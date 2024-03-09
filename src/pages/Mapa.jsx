@@ -27,7 +27,13 @@ export const Mapa = () => {
     if (rotas.length > 0) {
       // Adiciona as rotas no mapa
       rotas.forEach((rota) => {
-        L.polyline(rota, { color: 'red' }).addTo(mapa);
+      L.polyline(rota, { color: 'red' })
+    //  L.marker([rota.x, rota.y])
+        .addTo(mapa)
+   //     .bindPopup(`<b>${rota.nome}</b><br/>Coordenadas: ${rota.x}, ${rota.y}`);
+
+        
+        
       });
     }
   
@@ -52,8 +58,8 @@ export const Mapa = () => {
     try {
       setLoading(true);
       const response = await axios.get("http://localhost:1700/calcularRotaOtima");
-      setRotas(response.data.rota_otima);
-      console.log(response.data.rota_otima)
+      setRotas(response.data);
+      console.log(response.data)
     } catch (error) {
       console.error("Erro ao calcular rota ótima:", error);
     }
